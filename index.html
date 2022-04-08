@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ROBLOX Client Data</title>
+</head>
+<body>
+	<h1>ROBLOX Client Data</h1>
+	<section id="defunct" style="background-color:#FFE4E4;border:2px solid #FF4040;padding: 0 1em;">
+		<h2>Deprecated</h2>
+		<p>This site is no longer maintained. Projects that utilize this site will be out of date. Alternatives should be used instead.</p>
+		<h3>Latest data</h3>
+		<p>
+			To retrieve the latest API dump, the following steps may be implemented:
+			<ol>
+				<li>Fetch the current version hash of Roblox Studio from the following URL:<br><a href="http://setup.roblox.com/versionQTStudio">http://setup.roblox.com/versionQTStudio</a></li>
+				<li>Fetch the latest API dump by replacing <code>&lt;HASH&gt;</code> in the following URL with the retrieved version hash:<br><a href="http://setup.roblox.com/version-b724ac4d89fb4d66-API-Dump.json">http://setup.roblox.com/<code>&lt;HASH&gt;</code>-API-Dump.json</a></li>
+			</ol>
+			Note that the dump will be in a JSON format that differs from the format provided by this site.
+		</p>
+		<p>
+			The latest Reflection Metadata can be retrieved in a similar way, although it may not be viable in some situations.
+			<ol>
+				<li>Fetch the current version hash of Roblox Studio from the following URL:<br><a href="http://setup.roblox.com/versionQTStudio">http://setup.roblox.com/versionQTStudio</a></li>
+				<li>Fetch the latest studio archive by replacing <code>&lt;HASH&gt;</code> in the following URL with the retrieved version hash:<br><a href="http://setup.roblox.com/version-b724ac4d89fb4d66-RobloxStudio.zip">http://setup.roblox.com/<code>&lt;HASH&gt;</code>-RobloxStudio.zip</a></li>
+				<li>Extract <code>ReflectionMetadata.xml</code> from the ZIP file.</li>
+			</ol>
+		</p>
+		<p>
+			For plugins and scripts on Roblox, EchoReaper's <a href="https://devforum.roblox.com/t/auto-updated-api-dump-reflection-metadata-module/170975">Auto-updated API Dump module</a> may be used. This also includes Reflection Metadata and explorer icons.
+		</p>
+		<h3>Historical data</h3>
+		<p>For retrieving historical API dumps and Reflection Metadata, the <a href="https://github.com/RobloxAPI/archive">Roblox Lua API Archive</a> repository may be used.</p>
+	</section>
+	<p>
+		This site contains data about versions of the ROBLOX client, available in multiple formats. Check out the <a href="https://github.com/Anaminus/roblox-data">GitHub repository</a> for more information.
+	</p>
+	<p>
+		<b>This project is in beta. Do not use for any serious work unless you want it to break!</b>
+	</p>
+	<h2>JSON format</h2>
+	<ul>
+		<li><a href="https://github.com/Anaminus/roblox-data/blob/master/info/json-format.md">Format schema</a></li>
+		<li><a href="/rbx/json/header.json">Header file</a></li>
+		<li><a href="/rbx/json/api/latest.json">Latest API dump</a></li>
+		<li><a href="/rbx/json/rmd/latest.json">Latest ReflectionMetadata file</a></li>
+		<li>API dumps for specific builds at <code>/rbx/json/api/&lt;version-hash&gt;.json</code></li>
+		<li>ReflectionMetadata for specific builds at <code>/rbx/json/rmd/&lt;version-hash&gt;.json</code></li>
+	</ul>
+	<h2>Raw format</h2>
+	<ul>
+		<li><a href="https://github.com/Anaminus/roblox-data/blob/master/info/raw-format.md">Format schema</a></li>
+		<li><a href="/rbx/raw/header.txt">Header file</a></li>
+		<li><a href="/rbx/raw/api/latest.txt">Latest API dump</a></li>
+		<li><a href="/rbx/raw/rmd/latest.xml">Latest ReflectionMetadata file</a></li>
+		<li>API dumps for specific builds at <code>/rbx/raw/api/&lt;version-hash&gt;.txt</code></li>
+		<li>ReflectionMetadata for specific builds at <code>/rbx/raw/rmd/&lt;version-hash&gt;.xml</code></li>
+	</ul>
+</body>
+</html>
